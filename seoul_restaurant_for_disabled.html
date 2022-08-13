@@ -1,0 +1,3085 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_15cc27a2ab3e800481c215a2d6aaae4e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_15cc27a2ab3e800481c215a2d6aaae4e" ></div>
+        
+</body>
+<script>    
+    
+            var map_15cc27a2ab3e800481c215a2d6aaae4e = L.map(
+                "map_15cc27a2ab3e800481c215a2d6aaae4e",
+                {
+                    center: [37.5536067, 126.9674308],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bf636e25b32b4ec5b8ee27da3df13653 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_15cc27a2ab3e800481c215a2d6aaae4e);
+        
+    
+            var tile_layer_a0131b324736e4a4397a58a35b46264f = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_81a7517cb3bcb2a102e19b703c92b37f = new L.Control.MiniMap(
+                tile_layer_a0131b324736e4a4397a58a35b46264f,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_15cc27a2ab3e800481c215a2d6aaae4e.addControl(mini_map_81a7517cb3bcb2a102e19b703c92b37f);
+        
+    
+            var marker_cluster_089a9a94e8c675a22c8e4815ace08870 = L.markerClusterGroup(
+                {}
+            );
+            map_15cc27a2ab3e800481c215a2d6aaae4e.addLayer(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var marker_5f4b9e0bfc86a7518af631eca62cd1cd = L.marker(
+                [37.59243175, 126.91755377300548],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_0c8e3b17779d5c481f39c721e199b44d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_5f4b9e0bfc86a7518af631eca62cd1cd.setIcon(icon_0c8e3b17779d5c481f39c721e199b44d);
+        
+    
+            marker_5f4b9e0bfc86a7518af631eca62cd1cd.bindTooltip(
+                `<div>
+                     [시설명]: 롯데리아 [주소]: 은평구 응암로 229 [연락처]: 02-308-6681 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5f28155455e6ed5bc232014380255db2 = L.marker(
+                [37.4947825, 126.8606197],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_ad9f3a1e3b4f8383c2403ece08eaba98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_5f28155455e6ed5bc232014380255db2.setIcon(icon_ad9f3a1e3b4f8383c2403ece08eaba98);
+        
+    
+            marker_5f28155455e6ed5bc232014380255db2.bindTooltip(
+                `<div>
+                     [시설명]: 대창타운빌 [주소]: 구로구 개봉로23가길 70 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_068e0598c52697c71062219cce860e61 = L.marker(
+                [37.5705367, 127.0393374],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_0d5c138e70c58bded2a8b9999109824f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_068e0598c52697c71062219cce860e61.setIcon(icon_0d5c138e70c58bded2a8b9999109824f);
+        
+    
+            marker_068e0598c52697c71062219cce860e61.bindTooltip(
+                `<div>
+                     [시설명]: 대원 [주소]: 성동구 고산자로26길 12 [연락처]: 02-2295-5500 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cb91a941359310802fae3e783324c97a = L.marker(
+                [37.5237482, 127.0377675],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_86441387a6b6a4f8488a1125d29babd7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_cb91a941359310802fae3e783324c97a.setIcon(icon_86441387a6b6a4f8488a1125d29babd7);
+        
+    
+            marker_cb91a941359310802fae3e783324c97a.bindTooltip(
+                `<div>
+                     [시설명]: 커피빈 압구정점(스마트 익스체인지 빌딩) [주소]: 강남구 도산대로49길 13 [연락처]: 02-543-5922 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_94ecd60942e1ace7e9ead5a50b66a1f7 = L.marker(
+                [37.5014098, 126.9208774],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_0fd786f36f8189f7d23f564f12f152a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_94ecd60942e1ace7e9ead5a50b66a1f7.setIcon(icon_0fd786f36f8189f7d23f564f12f152a0);
+        
+    
+            marker_94ecd60942e1ace7e9ead5a50b66a1f7.bindTooltip(
+                `<div>
+                     [시설명]: 세종대왕숯불갈비 [주소]: 동작구 여의대방로 136 [연락처]: 02-823-2517 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16a15613143bcf6ce66839c9f8e7dccc = L.marker(
+                [37.50561, 126.90651],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_0717325b1b6ccbcfd865a782f2edc877 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_16a15613143bcf6ce66839c9f8e7dccc.setIcon(icon_0717325b1b6ccbcfd865a782f2edc877);
+        
+    
+            marker_16a15613143bcf6ce66839c9f8e7dccc.bindTooltip(
+                `<div>
+                     [시설명]: 가족천하 [주소]: 영등포구 가마산로 330 [연락처]: 02-847-4500 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2251cd484120ce704c7364a2ec4c46b6 = L.marker(
+                [37.5067233, 127.0566608],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_e1174906cf8ab763a00c36ceabdd6976 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_2251cd484120ce704c7364a2ec4c46b6.setIcon(icon_e1174906cf8ab763a00c36ceabdd6976);
+        
+    
+            marker_2251cd484120ce704c7364a2ec4c46b6.bindTooltip(
+                `<div>
+                     [시설명]: 봉산집 [주소]: 강남구 삼성로 564 [연락처]: 02-552-5898 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cfd54f00b89a6bc2a8485682734cfb95 = L.marker(
+                [37.652686, 127.0524448],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_800c15e3ba49b600a0f0c466c3e786b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_cfd54f00b89a6bc2a8485682734cfb95.setIcon(icon_800c15e3ba49b600a0f0c466c3e786b7);
+        
+    
+            marker_cfd54f00b89a6bc2a8485682734cfb95.bindTooltip(
+                `<div>
+                     [시설명]: 하누소 [주소]: 도봉구 노해로 327 [연락처]: 02-900-9900 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: Y [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_436fdc6fda59bb0f427862982b0996ee = L.marker(
+                [37.65809, 127.06864],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_5d91d93482e5d4002db9a960b6166009 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_436fdc6fda59bb0f427862982b0996ee.setIcon(icon_5d91d93482e5d4002db9a960b6166009);
+        
+    
+            marker_436fdc6fda59bb0f427862982b0996ee.bindTooltip(
+                `<div>
+                     [시설명]: 근린생활시설(대게나라) [주소]: 노원구 상계로 122 [연락처]: 02-932-9981 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1223370772f003ece89ec5a9c68c8d51 = L.marker(
+                [37.5248662, 127.1322197],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_691a43156c5db2df3191ef0a756ac879 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_1223370772f003ece89ec5a9c68c8d51.setIcon(icon_691a43156c5db2df3191ef0a756ac879);
+        
+    
+            marker_1223370772f003ece89ec5a9c68c8d51.bindTooltip(
+                `<div>
+                     [시설명]: 두울빌딩 [주소]: 강동구 강동대로53길 22 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f7dada39ca22c0c80bc6fb13d5b6dc7f = L.marker(
+                [37.5093574, 127.0231274],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_d34038a5fd59dda8365c0fc5a9f52fe0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_f7dada39ca22c0c80bc6fb13d5b6dc7f.setIcon(icon_d34038a5fd59dda8365c0fc5a9f52fe0);
+        
+    
+            marker_f7dada39ca22c0c80bc6fb13d5b6dc7f.bindTooltip(
+                `<div>
+                     [시설명]: (주) 씨머스 [주소]: 강남구 학동로2길  [연락처]: 02-546-7602 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_43769b487d9a5ffdc48320497b44915c = L.marker(
+                [37.5681502, 127.046012],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_5c9edb2620101017a7a88c7d6762b30f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_43769b487d9a5ffdc48320497b44915c.setIcon(icon_5c9edb2620101017a7a88c7d6762b30f);
+        
+    
+            marker_43769b487d9a5ffdc48320497b44915c.bindTooltip(
+                `<div>
+                     [시설명]: 수원왕갈비 [주소]: 성동구 마장로  [연락처]: 02-2299-8592 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ec357192ac807a063c60df95814597e3 = L.marker(
+                [37.5688374, 126.9868951],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_ca5ff3a9d28359e2653cb68449f57aee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_ec357192ac807a063c60df95814597e3.setIcon(icon_ca5ff3a9d28359e2653cb68449f57aee);
+        
+    
+            marker_ec357192ac807a063c60df95814597e3.bindTooltip(
+                `<div>
+                     [시설명]: 퍼쥬망 왕갈비전문점 [주소]: 종로구 삼일대로15길 18 [연락처]: 02-732-8555 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d810f085d45316d30901e69e5c28b473 = L.marker(
+                [37.5564913, 126.9223054],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_4c0bb49176636ad85accebdd143545a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_d810f085d45316d30901e69e5c28b473.setIcon(icon_4c0bb49176636ad85accebdd143545a9);
+        
+    
+            marker_d810f085d45316d30901e69e5c28b473.bindTooltip(
+                `<div>
+                     [시설명]: 일식미진(일반음식점)  [주소]: 마포구 월드컵북로2길 37 [연락처]: 02-324-4848 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_67bcaa7380eef70d965e4b92befdfcb9 = L.marker(
+                [37.62, 127.06322],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_f4f44c0079afcd7fb66349954130a84d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_67bcaa7380eef70d965e4b92befdfcb9.setIcon(icon_f4f44c0079afcd7fb66349954130a84d);
+        
+    
+            marker_67bcaa7380eef70d965e4b92befdfcb9.bindTooltip(
+                `<div>
+                     [시설명]: The만나 [주소]: 노원구 석계로 103 [연락처]: 02-971-1100 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_471ed4dbdcc211c93169c3b15dac4e02 = L.marker(
+                [37.5817488, 127.0029622],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_d0381e8f6e35f005125928f47620dbed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_471ed4dbdcc211c93169c3b15dac4e02.setIcon(icon_d0381e8f6e35f005125928f47620dbed);
+        
+    
+            marker_471ed4dbdcc211c93169c3b15dac4e02.bindTooltip(
+                `<div>
+                     [시설명]: 대학로바탕골 [주소]: 종로구 대학로10길 5 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3f9d36f99972014a4326b69eb419a46a = L.marker(
+                [37.6418244, 127.0704691],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_4841ec288e907e0cee1976877293ba3a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_3f9d36f99972014a4326b69eb419a46a.setIcon(icon_4841ec288e907e0cee1976877293ba3a);
+        
+    
+            marker_3f9d36f99972014a4326b69eb419a46a.bindTooltip(
+                `<div>
+                     [시설명]: 정동진회집 하계점 [주소]: 노원구 한글비석로1길 61 [연락처]: 02-976-4983 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_71200be14450461ebec223ece3542d90 = L.marker(
+                [37.4484418, 126.9028502],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_b00d9de16741ffaa79577fa869f3dc5c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_71200be14450461ebec223ece3542d90.setIcon(icon_b00d9de16741ffaa79577fa869f3dc5c);
+        
+    
+            marker_71200be14450461ebec223ece3542d90.bindTooltip(
+                `<div>
+                     [시설명]: 공룡고기 [주소]: 금천구 시흥대로  [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_032804da137e50f4ef626d0c0a87daa8 = L.marker(
+                [37.5590021, 126.9379231],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_95d21bd4dd3c0dfa9b0cbb8a6219846b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_032804da137e50f4ef626d0c0a87daa8.setIcon(icon_95d21bd4dd3c0dfa9b0cbb8a6219846b);
+        
+    
+            marker_032804da137e50f4ef626d0c0a87daa8.bindTooltip(
+                `<div>
+                     [시설명]: 아웃백스테이크하우스 신촌점 [주소]: 서대문구 연세로12길 33 [연락처]: 02-3147-1871 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_535b45a5de016c164d86bfefe9280214 = L.marker(
+                [37.5894396, 126.9976609],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_b859a4052dbdb27b5e58a115eb3a9416 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_535b45a5de016c164d86bfefe9280214.setIcon(icon_b859a4052dbdb27b5e58a115eb3a9416);
+        
+    
+            marker_535b45a5de016c164d86bfefe9280214.bindTooltip(
+                `<div>
+                     [시설명]: 효천공영-음악감상실 [주소]: 종로구 성균관로 87 [연락처]: 02-3676-2352 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_13f9f5d9c0857b697914df5a35c69280 = L.marker(
+                [37.608413, 126.9291524],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_3ba7279c471e75976f78f94ec0575c02 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_13f9f5d9c0857b697914df5a35c69280.setIcon(icon_3ba7279c471e75976f78f94ec0575c02);
+        
+    
+            marker_13f9f5d9c0857b697914df5a35c69280.bindTooltip(
+                `<div>
+                     [시설명]: 브리꼴라쥬카페 [주소]: 은평구 진흥로 87 [연락처]: 02-702-2688 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c0ad4ad4a0f59d26dc334204ad5eeb7a = L.marker(
+                [37.5461477, 127.105331],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_d323fc1f4dec6398479f370393373c54 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_c0ad4ad4a0f59d26dc334204ad5eeb7a.setIcon(icon_d323fc1f4dec6398479f370393373c54);
+        
+    
+            marker_c0ad4ad4a0f59d26dc334204ad5eeb7a.bindTooltip(
+                `<div>
+                     [시설명]: 금강수산 [주소]: 광진구 아차산로 230 [연락처]: 02-461-4300 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_11fea60c14a5039331125cee863d05ce = L.marker(
+                [37.5725947, 126.9877161],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_97a2cdd74a0dfc8bbcfcf0dbd4bf55eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_11fea60c14a5039331125cee863d05ce.setIcon(icon_97a2cdd74a0dfc8bbcfcf0dbd4bf55eb);
+        
+    
+            marker_11fea60c14a5039331125cee863d05ce.bindTooltip(
+                `<div>
+                     [시설명]: 카페뎀셀브쥬 [주소]: 종로구 삼일대로 388 [연락처]: 02-2266-5947 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0499737db087a339b98700ed5d85658b = L.marker(
+                [37.6559172, 127.0651444],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_7a307a0c47a7a6607ea4bef3bb64ca45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_0499737db087a339b98700ed5d85658b.setIcon(icon_7a307a0c47a7a6607ea4bef3bb64ca45);
+        
+    
+            marker_0499737db087a339b98700ed5d85658b.bindTooltip(
+                `<div>
+                     [시설명]: 이춘복참치 [주소]: 노원구 노해로85길 10-7 [연락처]: 02-951-4558 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bb59a0189879997297cdb41b3d9e7206 = L.marker(
+                [37.4832485, 127.1263349],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_46a7947922d90dcc0f68f900c219d784 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_bb59a0189879997297cdb41b3d9e7206.setIcon(icon_46a7947922d90dcc0f68f900c219d784);
+        
+    
+            marker_bb59a0189879997297cdb41b3d9e7206.bindTooltip(
+                `<div>
+                     [시설명]: 빕스 문정점 [주소]: 송파구 새말로5길 31 [연락처]: 02-443-2997 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9e8c001f0bc7101c6a83f665d1edaaaf = L.marker(
+                [37.5610387, 126.915841],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_7911480dd1d5dc98c3f2c43158864c7e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_9e8c001f0bc7101c6a83f665d1edaaaf.setIcon(icon_7911480dd1d5dc98c3f2c43158864c7e);
+        
+    
+            marker_9e8c001f0bc7101c6a83f665d1edaaaf.bindTooltip(
+                `<div>
+                     [시설명]: 일반음식점(삿뽀로) [주소]: 마포구 월드컵북로 14 [연락처]: 02-3144-4671 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8e5339591d51a34046ae7de64352470b = L.marker(
+                [37.4723043, 126.8949927],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_718487667d6a6425103cb108cd5a0c8e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_8e5339591d51a34046ae7de64352470b.setIcon(icon_718487667d6a6425103cb108cd5a0c8e);
+        
+    
+            marker_8e5339591d51a34046ae7de64352470b.bindTooltip(
+                `<div>
+                     [시설명]: 코스모 [주소]: 금천구 시흥대로123길  [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c6955c2a47867d70e1df8dd9b9ba0823 = L.marker(
+                [37.4930819, 127.0094331],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_8ab806895a7d6cd58fedca11795ef055 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_c6955c2a47867d70e1df8dd9b9ba0823.setIcon(icon_8ab806895a7d6cd58fedca11795ef055);
+        
+    
+            marker_c6955c2a47867d70e1df8dd9b9ba0823.bindTooltip(
+                `<div>
+                     [시설명]: 타워차이 [주소]: 서초구 법원로1길 7 [연락처]: 02-599-3507 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_65d3b8b82188958f3b406a408fe22771 = L.marker(
+                [37.4981775, 127.0540753],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_8228057d457aa60aad01bb77686c1cce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_65d3b8b82188958f3b406a408fe22771.setIcon(icon_8228057d457aa60aad01bb77686c1cce);
+        
+    
+            marker_65d3b8b82188958f3b406a408fe22771.bindTooltip(
+                `<div>
+                     [시설명]: 수정궁(갈비탕 전문점) [주소]: 강남구 도곡로63길  [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ef59f5fd75a1dbd7ae1743cfe3507a37 = L.marker(
+                [37.6242653, 127.0734496],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_174ac464a68ab5fb1f4e6706149b405e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_ef59f5fd75a1dbd7ae1743cfe3507a37.setIcon(icon_174ac464a68ab5fb1f4e6706149b405e);
+        
+    
+            marker_ef59f5fd75a1dbd7ae1743cfe3507a37.bindTooltip(
+                `<div>
+                     [시설명]: 근린생활시설(천하뼈다귀감자탕) [주소]: 노원구 동일로 1595 [연락처]: 02-933-9897 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ab74d01c0d7b500b5692fec3b074a3f7 = L.marker(
+                [37.558747, 127.0354994],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_089930c594bdb1102efef251f51c3105 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_ab74d01c0d7b500b5692fec3b074a3f7.setIcon(icon_089930c594bdb1102efef251f51c3105);
+        
+    
+            marker_ab74d01c0d7b500b5692fec3b074a3f7.bindTooltip(
+                `<div>
+                     [시설명]: 옛골토성 [주소]: 성동구 고산자로10길  [연락처]: 02-2282-5292 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_821601d8d8ac2868b183998621caa2f4 = L.marker(
+                [37.4964603, 127.0333328],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_fd8fd7bb26bd2e05b277cdfd1fe6b56c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_821601d8d8ac2868b183998621caa2f4.setIcon(icon_fd8fd7bb26bd2e05b277cdfd1fe6b56c);
+        
+    
+            marker_821601d8d8ac2868b183998621caa2f4.bindTooltip(
+                `<div>
+                     [시설명]: 찰진고기(그랑프리 빌딩) [주소]: 강남구 테헤란로10길 9 [연락처]: 02-561-5171 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1845d45a9d97dfc48126260241934259 = L.marker(
+                [37.5056626, 127.0237845],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_5f2d2ef3041be817f5fa9102fbb19dcd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_1845d45a9d97dfc48126260241934259.setIcon(icon_5f2d2ef3041be817f5fa9102fbb19dcd);
+        
+    
+            marker_1845d45a9d97dfc48126260241934259.bindTooltip(
+                `<div>
+                     [시설명]: 갈비사랑 [주소]: 서초구 강남대로  [연락처]: 02-3463-9800 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e6cd33cb1285ab4c22ebaff065c881fc = L.marker(
+                [37.4736078, 127.0403251],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_2d0f7460b0e8145c308d481472c4f46d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_e6cd33cb1285ab4c22ebaff065c881fc.setIcon(icon_2d0f7460b0e8145c308d481472c4f46d);
+        
+    
+            marker_e6cd33cb1285ab4c22ebaff065c881fc.bindTooltip(
+                `<div>
+                     [시설명]: 별난횟집 [주소]: 서초구 마방로2길 26 [연락처]: 02-571-3050 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1f2024dc60fa726fba6e1bdd72864d72 = L.marker(
+                [37.5668793, 126.9198359],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_179beedd8d10815243dfd496126213dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_1f2024dc60fa726fba6e1bdd72864d72.setIcon(icon_179beedd8d10815243dfd496126213dd);
+        
+    
+            marker_1f2024dc60fa726fba6e1bdd72864d72.bindTooltip(
+                `<div>
+                     [시설명]: 연일선지해장국 [주소]: 서대문구 수색로  [연락처]: 정보 없음 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_536509eee62ca423028a69183989a784 = L.marker(
+                [37.4843898, 127.1262189],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_625f7af23c6a2d7938ddc524730a2330 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_536509eee62ca423028a69183989a784.setIcon(icon_625f7af23c6a2d7938ddc524730a2330);
+        
+    
+            marker_536509eee62ca423028a69183989a784.bindTooltip(
+                `<div>
+                     [시설명]: 신토오리 [주소]: 송파구 문정로4길  [연락처]: 02-430-5295 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a33c4cae15712651e03a42c4cb85c7dc = L.marker(
+                [37.5182593, 126.8878732],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_a67d235c6b22170eecd142460e1312b0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_a33c4cae15712651e03a42c4cb85c7dc.setIcon(icon_a67d235c6b22170eecd142460e1312b0);
+        
+    
+            marker_a33c4cae15712651e03a42c4cb85c7dc.bindTooltip(
+                `<div>
+                     [시설명]: 광양림 [주소]: 영등포구 선유로9가길  [연락처]: 02-2677-5775 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e5eb5d28e40f2dbba40065d170d0e418 = L.marker(
+                [37.6579147, 127.0278237],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_91c4ec806670aa95265413e30df7c134 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_e5eb5d28e40f2dbba40065d170d0e418.setIcon(icon_91c4ec806670aa95265413e30df7c134);
+        
+    
+            marker_e5eb5d28e40f2dbba40065d170d0e418.bindTooltip(
+                `<div>
+                     [시설명]: 대문한정식 [주소]: 도봉구 시루봉로  [연락처]: 02-956-0843 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_57482e1745cd0496685adaa868044fda = L.marker(
+                [37.5809227, 126.9361647],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_71299aefe62b88b29b8c8ff4cd4d0edf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_57482e1745cd0496685adaa868044fda.setIcon(icon_71299aefe62b88b29b8c8ff4cd4d0edf);
+        
+    
+            marker_57482e1745cd0496685adaa868044fda.bindTooltip(
+                `<div>
+                     [시설명]: 거북이집 [주소]: 서대문구 연희로  [연락처]: 02-322-8018 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_024b613252a53fd52989333445656435 = L.marker(
+                [37.5733438, 126.8167715],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_bd990b43c717d1f17203509b1719b101 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_024b613252a53fd52989333445656435.setIcon(icon_bd990b43c717d1f17203509b1719b101);
+        
+    
+            marker_024b613252a53fd52989333445656435.bindTooltip(
+                `<div>
+                     [시설명]: 고기굼터 [주소]: 강서구 양천로 376 [연락처]: 02-3663-8592 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f7ead5ba904c99ce65211ef4e3800e5b = L.marker(
+                [37.6094509, 127.0301309],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_2c4edc35633e56a1a988d5309861b6e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_f7ead5ba904c99ce65211ef4e3800e5b.setIcon(icon_2c4edc35633e56a1a988d5309861b6e7);
+        
+    
+            marker_f7ead5ba904c99ce65211ef4e3800e5b.bindTooltip(
+                `<div>
+                     [시설명]: 베누스타-뷔페 [주소]: 성북구 도봉로 1 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c88a42abe5658e8111d86bb5250d22e = L.marker(
+                [37.5934878, 127.0740277],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_f54e09289e7d1f8fad695174eb128f5e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_2c88a42abe5658e8111d86bb5250d22e.setIcon(icon_f54e09289e7d1f8fad695174eb128f5e);
+        
+    
+            marker_2c88a42abe5658e8111d86bb5250d22e.bindTooltip(
+                `<div>
+                     [시설명]: 빕스 상봉역점 [주소]: 중랑구 망우로  [연락처]: 02-491-1997 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0baf21eb3001452a8030ed8d472671e0 = L.marker(
+                [37.5588719, 126.84201],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_663d95c7cd3735ff37e2e9cef76401a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_0baf21eb3001452a8030ed8d472671e0.setIcon(icon_663d95c7cd3735ff37e2e9cef76401a3);
+        
+    
+            marker_0baf21eb3001452a8030ed8d472671e0.bindTooltip(
+                `<div>
+                     [시설명]: 맑은바닷가의나루터 [주소]: 강서구 강서로54길 73 [연락처]: 02-3663-0067 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_34e5dd2397409d7724e1aaa3b684def6 = L.marker(
+                [37.4956338, 127.014745],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_833e4aaef25802e2e0ad25c8b70a3fbc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_34e5dd2397409d7724e1aaa3b684def6.setIcon(icon_833e4aaef25802e2e0ad25c8b70a3fbc);
+        
+    
+            marker_34e5dd2397409d7724e1aaa3b684def6.bindTooltip(
+                `<div>
+                     [시설명]: 베아따빌딩신관 [주소]: 서초구 서초대로53길 8 [연락처]: 02-535-9292 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fdc44c9d668a491547c47b9bff80fbd8 = L.marker(
+                [37.5982911, 126.9617423],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_3ea02141e5b260a5ded46b1008049e3d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_fdc44c9d668a491547c47b9bff80fbd8.setIcon(icon_3ea02141e5b260a5ded46b1008049e3d);
+        
+    
+            marker_fdc44c9d668a491547c47b9bff80fbd8.bindTooltip(
+                `<div>
+                     [시설명]: 하림각 [주소]: 종로구 자하문로  [연락처]: 02-396-2442 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_561aeec90eb72c663ecec4c0c7353996 = L.marker(
+                [37.4996847, 127.0385641],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_15ad20a84cc3bcec050ed33345a160eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_561aeec90eb72c663ecec4c0c7353996.setIcon(icon_15ad20a84cc3bcec050ed33345a160eb);
+        
+    
+            marker_561aeec90eb72c663ecec4c0c7353996.bindTooltip(
+                `<div>
+                     [시설명]: 오발탄 [주소]: 강남구 논현로86길  [연락처]: 02-2051-7775 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5f3a53f67593579d1e0bcebd6474a823 = L.marker(
+                [37.5317589, 127.1419176],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_41a9ac464fbaaa4b9480e4d90aa90006 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_5f3a53f67593579d1e0bcebd6474a823.setIcon(icon_41a9ac464fbaaa4b9480e4d90aa90006);
+        
+    
+            marker_5f3a53f67593579d1e0bcebd6474a823.bindTooltip(
+                `<div>
+                     [시설명]: 동구밖 장작구이(단군의땅) [주소]: 강동구 진황도로 227 [연락처]: 02-488-5292 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eeda4a915088480e66c1cd61df21feff = L.marker(
+                [37.6745081, 127.0610072],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_bc40ce6a4f62b968817544d27f01caf9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_eeda4a915088480e66c1cd61df21feff.setIcon(icon_bc40ce6a4f62b968817544d27f01caf9);
+        
+    
+            marker_eeda4a915088480e66c1cd61df21feff.bindTooltip(
+                `<div>
+                     [시설명]: 근린생활시설(진할매칼국수보쌈) [주소]: 노원구 동일로242길 109 [연락처]: 02-951-1507 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1f47e9abd2d3ba51646e7a449c1dc4ef = L.marker(
+                [37.5262136, 127.0522174],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_846e6780e740690887f677d78203d881 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_1f47e9abd2d3ba51646e7a449c1dc4ef.setIcon(icon_846e6780e740690887f677d78203d881);
+        
+    
+            marker_1f47e9abd2d3ba51646e7a449c1dc4ef.bindTooltip(
+                `<div>
+                     [시설명]: 논골집 [주소]: 강남구 압구정로79길 55 [연락처]: 02-543-0135 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cecd213b484bf9b1df8800c5e7b909e4 = L.marker(
+                [37.6561248, 127.0625202],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_b05bb7d53147b2671db6fc03a4a708db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_cecd213b484bf9b1df8800c5e7b909e4.setIcon(icon_b05bb7d53147b2671db6fc03a4a708db);
+        
+    
+            marker_cecd213b484bf9b1df8800c5e7b909e4.bindTooltip(
+                `<div>
+                     [시설명]: 근린생활시설(풍천민물장어) [주소]: 노원구 노해로81길 12-26 [연락처]: 02-935-5523 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f9dc008128cbcf7b4d7531592e137296 = L.marker(
+                [37.502738, 127.0408804],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_c9a8148f741d69899e1ac740fc33e9df = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_f9dc008128cbcf7b4d7531592e137296.setIcon(icon_c9a8148f741d69899e1ac740fc33e9df);
+        
+    
+            marker_f9dc008128cbcf7b4d7531592e137296.bindTooltip(
+                `<div>
+                     [시설명]: 보름달 [주소]: 강남구 테헤란로37길 22 [연락처]: 02-556-6777 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b72518cb300c67b9de948f9fa3b01a23 = L.marker(
+                [37.4788804, 127.0560061],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_a86743c1c9b704369da47e12ebfaadb4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_b72518cb300c67b9de948f9fa3b01a23.setIcon(icon_a86743c1c9b704369da47e12ebfaadb4);
+        
+    
+            marker_b72518cb300c67b9de948f9fa3b01a23.bindTooltip(
+                `<div>
+                     [시설명]: 역삼버드나무 집 [주소]: 강남구 언주로 522 [연락처]: 02-2088-3392 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_04c2b1e160adad9c79e8fefa8c7eab36 = L.marker(
+                [37.6510841, 127.0326932],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_5e3bd5e1934ac60c259a3e9f805d2e32 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_04c2b1e160adad9c79e8fefa8c7eab36.setIcon(icon_5e3bd5e1934ac60c259a3e9f805d2e32);
+        
+    
+            marker_04c2b1e160adad9c79e8fefa8c7eab36.bindTooltip(
+                `<div>
+                     [시설명]: 미스터피자 [주소]: 도봉구 노해로  [연락처]: 02-900-2032 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c6706640491d51d72a901a043544319c = L.marker(
+                [37.6242653, 127.0734496],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_8de62d7737509c6a564d7748f821261b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_c6706640491d51d72a901a043544319c.setIcon(icon_8de62d7737509c6a564d7748f821261b);
+        
+    
+            marker_c6706640491d51d72a901a043544319c.bindTooltip(
+                `<div>
+                     [시설명]: 피자헛 [주소]: 노원구 동일로 1333 [연락처]: 02-935-5143 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_52722d94a18e57ba7fbeee9c875663ab = L.marker(
+                [37.53181015, 126.87606934807158],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_2dadd887d6875bd81650b340d5d93191 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_52722d94a18e57ba7fbeee9c875663ab.setIcon(icon_2dadd887d6875bd81650b340d5d93191);
+        
+    
+            marker_52722d94a18e57ba7fbeee9c875663ab.bindTooltip(
+                `<div>
+                     [시설명]: 미담 [주소]: 양천구 목동서로 133-4 [연락처]: 02-2642-2300 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: Y [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_40635650a06145b2ccb9624ff0ca9de0 = L.marker(
+                [37.605817099999996, 127.09612302523541],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_ded4a082b3d416931224d90b6f9a82cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_40635650a06145b2ccb9624ff0ca9de0.setIcon(icon_ded4a082b3d416931224d90b6f9a82cd);
+        
+    
+            marker_40635650a06145b2ccb9624ff0ca9de0.bindTooltip(
+                `<div>
+                     [시설명]: 태능가든 [주소]: 중랑구 신내로14길 13 [연락처]: 02-3422-2800 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ed9897bf10e12872caa48b53d85f2f5 = L.marker(
+                [37.56468945, 126.97629845011545],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_ddc81e3751f2bea37ba9abef9ace463a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_5ed9897bf10e12872caa48b53d85f2f5.setIcon(icon_ddc81e3751f2bea37ba9abef9ace463a);
+        
+    
+            marker_5ed9897bf10e12872caa48b53d85f2f5.bindTooltip(
+                `<div>
+                     [시설명]: 파리크라상 [주소]: 중구 덕수궁길 7 [연락처]: 02-773-8208 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4455671d461b196f6251557f59e4d69d = L.marker(
+                [37.5085992, 127.1118266],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_84c44de89e87cdfac6ded37a569495d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_4455671d461b196f6251557f59e4d69d.setIcon(icon_84c44de89e87cdfac6ded37a569495d3);
+        
+    
+            marker_4455671d461b196f6251557f59e4d69d.bindTooltip(
+                `<div>
+                     [시설명]: 양대박 [주소]: 송파구 백제고분로46길 44 [연락처]: 02-415-3321 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f1b6df216dd65af1c993743b5030673 = L.marker(
+                [37.555087, 126.9303086],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_74cbf975e18238eb67162dbef1ec7111 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_2f1b6df216dd65af1c993743b5030673.setIcon(icon_74cbf975e18238eb67162dbef1ec7111);
+        
+    
+            marker_2f1b6df216dd65af1c993743b5030673.bindTooltip(
+                `<div>
+                     [시설명]: coffeesmith(휴게음식점)  [주소]: 마포구 와우산로  [연락처]: 02-3143-6740 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aec3df48d5901ef03496c398726f757a = L.marker(
+                [37.49348, 127.0612738],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_93a999d72600b67662a84c44d0a956d0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_aec3df48d5901ef03496c398726f757a.setIcon(icon_93a999d72600b67662a84c44d0a956d0);
+        
+    
+            marker_aec3df48d5901ef03496c398726f757a.bindTooltip(
+                `<div>
+                     [시설명]: 양촌리 화로 숯불구이 [주소]: 강남구 남부순환로  [연락처]: 02-2058-1245 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ac02f580c5812cc8675a1a4f7ac63618 = L.marker(
+                [37.5001711, 127.0274709],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_99b9f293e5c13853f1b04dac0b81424c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_ac02f580c5812cc8675a1a4f7ac63618.setIcon(icon_99b9f293e5c13853f1b04dac0b81424c);
+        
+    
+            marker_ac02f580c5812cc8675a1a4f7ac63618.bindTooltip(
+                `<div>
+                     [시설명]: 쿼터백 [주소]: 강남구 테헤란로1길  [연락처]: 02-567-7879 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ad9ef949ed72042c249c9fb566be9232 = L.marker(
+                [37.5282263, 127.0325533],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_c698f5a63bd43377c7069068f573bbec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_ad9ef949ed72042c249c9fb566be9232.setIcon(icon_c698f5a63bd43377c7069068f573bbec);
+        
+    
+            marker_ad9ef949ed72042c249c9fb566be9232.bindTooltip(
+                `<div>
+                     [시설명]: 한일관 [주소]: 강남구 압구정로38길 14 [연락처]: 1577-9963 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4503c35b06655bbbc1ca456effa2f2c1 = L.marker(
+                [37.5087088, 127.1150475],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_bd8a56efd5a0522e242c0804155eeace = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_4503c35b06655bbbc1ca456effa2f2c1.setIcon(icon_bd8a56efd5a0522e242c0804155eeace);
+        
+    
+            marker_4503c35b06655bbbc1ca456effa2f2c1.bindTooltip(
+                `<div>
+                     [시설명]: 화사랑화로구이 [주소]: 송파구 오금로 162 [연락처]: 02-421-4554 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c24d53190f7c4c99ef90540f54e0be42 = L.marker(
+                [37.6873666, 127.0428041],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_3daaee6b14a6d73dfb34d73ee3db2f7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_c24d53190f7c4c99ef90540f54e0be42.setIcon(icon_3daaee6b14a6d73dfb34d73ee3db2f7c);
+        
+    
+            marker_c24d53190f7c4c99ef90540f54e0be42.bindTooltip(
+                `<div>
+                     [시설명]: 초원웨딩홀뷔페 [주소]: 도봉구 도봉산길 10 [연락처]: 02-955-2233 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_779f2e688bb649faa0edec5f37a9e7f6 = L.marker(
+                [37.5181281, 127.0286507],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_15093d85adef5bfd71027acf5088197d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_779f2e688bb649faa0edec5f37a9e7f6.setIcon(icon_15093d85adef5bfd71027acf5088197d);
+        
+    
+            marker_779f2e688bb649faa0edec5f37a9e7f6.bindTooltip(
+                `<div>
+                     [시설명]: 강강술래 [주소]: 강남구 논현로  [연락처]: 02-567-9233 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_91e4f610219e337056fefd2749d07953 = L.marker(
+                [37.5344928, 126.9944907],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_ea001b43c4ad7638f0e3c076e349a531 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_91e4f610219e337056fefd2749d07953.setIcon(icon_ea001b43c4ad7638f0e3c076e349a531);
+        
+    
+            marker_91e4f610219e337056fefd2749d07953.bindTooltip(
+                `<div>
+                     [시설명]: 메종르베이지-카페 [주소]: 용산구 이태원로  [연락처]: 02-749-5667 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_32bbfae773df54d1b939b8837aafdee5 = L.marker(
+                [37.5344928, 126.9944907],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_9802c45d4c0dee7ff149c9181a91e824 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_32bbfae773df54d1b939b8837aafdee5.setIcon(icon_9802c45d4c0dee7ff149c9181a91e824);
+        
+    
+            marker_32bbfae773df54d1b939b8837aafdee5.bindTooltip(
+                `<div>
+                     [시설명]: 이태원동 근린생활시설(휴게음식점) [주소]: 용산구 이태원로  [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9f69a7a6fa54044f9cac5e5629148773 = L.marker(
+                [37.51404815, 126.94198243306275],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_4e281eaba4981b3746bcda59b476285a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_9f69a7a6fa54044f9cac5e5629148773.setIcon(icon_4e281eaba4981b3746bcda59b476285a);
+        
+    
+            marker_9f69a7a6fa54044f9cac5e5629148773.bindTooltip(
+                `<div>
+                     [시설명]: 빕스 대방점 [주소]: 동작구 노량진로 2 [연락처]: 02-3280-1997 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f43d8695b82892481ca34cf1a853a0e1 = L.marker(
+                [37.5534973, 126.9747543],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_a85b56aad560bfe9d1187f090bfab70d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_f43d8695b82892481ca34cf1a853a0e1.setIcon(icon_a85b56aad560bfe9d1187f090bfab70d);
+        
+    
+            marker_f43d8695b82892481ca34cf1a853a0e1.bindTooltip(
+                `<div>
+                     [시설명]: 정감어린 [주소]: 용산구 후암로 4 [연락처]: 02-754-4389 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2ab26c866d632937657a8ab423d85150 = L.marker(
+                [37.4971109, 127.0310202],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_0ce45d08bf89194471e91b2bca3c3f4a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_2ab26c866d632937657a8ab423d85150.setIcon(icon_0ce45d08bf89194471e91b2bca3c3f4a);
+        
+    
+            marker_2ab26c866d632937657a8ab423d85150.bindTooltip(
+                `<div>
+                     [시설명]: 태평(한식집) [주소]: 강남구 테헤란로6길 14 [연락처]: 02-564-5551 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d225d6da0162b1aaf3cc889940bd7d55 = L.marker(
+                [37.6716996, 127.0511716],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_14f574c3f6704a27724579e7f6a99cec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_d225d6da0162b1aaf3cc889940bd7d55.setIcon(icon_14f574c3f6704a27724579e7f6a99cec);
+        
+    
+            marker_d225d6da0162b1aaf3cc889940bd7d55.bindTooltip(
+                `<div>
+                     [시설명]: 근린생활시설(황금오리농원) [주소]: 노원구 동일로231길 17 [연락처]: 02-935-5296 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_349178be186210ab8aed8111212221b5 = L.marker(
+                [37.5529815, 126.8515087],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_6ae9ae943aa32b9d6966353a554ad12a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_349178be186210ab8aed8111212221b5.setIcon(icon_6ae9ae943aa32b9d6966353a554ad12a);
+        
+    
+            marker_349178be186210ab8aed8111212221b5.bindTooltip(
+                `<div>
+                     [시설명]: 더캣츠 [주소]: 강서구 공항대로46길  [연락처]: 02-2698-7898 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8f3be7164bfccfef25073d4d066e89ad = L.marker(
+                [37.5453311, 126.9195762],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_6739dd39a871e7981b105852f210173b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_8f3be7164bfccfef25073d4d066e89ad.setIcon(icon_6739dd39a871e7981b105852f210173b);
+        
+    
+            marker_8f3be7164bfccfef25073d4d066e89ad.bindTooltip(
+                `<div>
+                     [시설명]: 봉피양마포점(오늘도안동한우) [주소]: 마포구 토정로  [연락처]: 02-715-2292 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_43257f9a48e173148f9e556f3b664350 = L.marker(
+                [37.5125229, 127.0568627],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_1540e989b0e2593d5ed508906346a647 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_43257f9a48e173148f9e556f3b664350.setIcon(icon_1540e989b0e2593d5ed508906346a647);
+        
+    
+            marker_43257f9a48e173148f9e556f3b664350.bindTooltip(
+                `<div>
+                     [시설명]: 흑돈가 [주소]: 강남구 봉은사로86길 14 [연락처]: 02-2051-0008 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d418a1c8d20eef88d0376c70f682528e = L.marker(
+                [37.6242653, 127.0734496],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_840d831e9284b9a1aae9e16193030142 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_d418a1c8d20eef88d0376c70f682528e.setIcon(icon_840d831e9284b9a1aae9e16193030142);
+        
+    
+            marker_d418a1c8d20eef88d0376c70f682528e.bindTooltip(
+                `<div>
+                     [시설명]: 근린생활시설(배밭고을) [주소]: 노원구 동일로 1611 [연락처]: 02-938-9500 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0412dda7175d45ace4e81c913b19439a = L.marker(
+                [37.6011916, 126.9318376],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_8269a3e6f7d49c39dcfe42b11cb30601 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_0412dda7175d45ace4e81c913b19439a.setIcon(icon_8269a3e6f7d49c39dcfe42b11cb30601);
+        
+    
+            marker_0412dda7175d45ace4e81c913b19439a.bindTooltip(
+                `<div>
+                     [시설명]: 동굴과 화로구이(뉴명성) [주소]: 은평구 은평로  [연락처]: 02-353-8592 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_882d0e398afb0749e719ec406710b3b2 = L.marker(
+                [37.5080462, 127.0652898],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_38237f5729ba6d3d0f2b7f42d805528d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_882d0e398afb0749e719ec406710b3b2.setIcon(icon_38237f5729ba6d3d0f2b7f42d805528d);
+        
+    
+            marker_882d0e398afb0749e719ec406710b3b2.bindTooltip(
+                `<div>
+                     [시설명]: 임고집한우 [주소]: 강남구 테헤란로104길 11 [연락처]: 02-567-5620 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a2eef432ffa163c51e1793f3b9f438ee = L.marker(
+                [37.4861863, 127.0303448],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_4e934abf3fd8c3a37d915cc0d0b64b62 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_a2eef432ffa163c51e1793f3b9f438ee.setIcon(icon_4e934abf3fd8c3a37d915cc0d0b64b62);
+        
+    
+            marker_a2eef432ffa163c51e1793f3b9f438ee.bindTooltip(
+                `<div>
+                     [시설명]: 일킬로칼국수 [주소]: 서초구 강남대로37길 59 [연락처]: 02-586-1052 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8759494e8ed8da68f609abc6def2de68 = L.marker(
+                [37.5548624, 126.9235641],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_e08fa423d61e900afb4dbbc84b8316d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_8759494e8ed8da68f609abc6def2de68.setIcon(icon_e08fa423d61e900afb4dbbc84b8316d7);
+        
+    
+            marker_8759494e8ed8da68f609abc6def2de68.bindTooltip(
+                `<div>
+                     [시설명]: 동원빌딩(근린생활시설) [주소]: 마포구 어울마당로 147-1 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ec0bdbc22fccf1f0d7ea14d8645e2cec = L.marker(
+                [37.6564188, 127.0641629],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_bc8a0835a060f006c5f47797bd900113 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_ec0bdbc22fccf1f0d7ea14d8645e2cec.setIcon(icon_bc8a0835a060f006c5f47797bd900113);
+        
+    
+            marker_ec0bdbc22fccf1f0d7ea14d8645e2cec.bindTooltip(
+                `<div>
+                     [시설명]: 본가 [주소]: 노원구 노해로83길 10-4 [연락처]: 02-931-9291 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f8efa3ddaea66725e8f489d0f429fade = L.marker(
+                [37.5111674, 127.0195732],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_0739ed4cc77afa3191a7591055530cc2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_f8efa3ddaea66725e8f489d0f429fade.setIcon(icon_0739ed4cc77afa3191a7591055530cc2);
+        
+    
+            marker_f8efa3ddaea66725e8f489d0f429fade.bindTooltip(
+                `<div>
+                     [시설명]: 타운플라자 [주소]: 서초구 신반포로47길 9-6 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_479b0a2c78ee0bed88e0722cb9fab4dc = L.marker(
+                [37.654297, 127.046085],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_8f2e5945bf8b06902729fe7fd5279ee5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_479b0a2c78ee0bed88e0722cb9fab4dc.setIcon(icon_8f2e5945bf8b06902729fe7fd5279ee5);
+        
+    
+            marker_479b0a2c78ee0bed88e0722cb9fab4dc.bindTooltip(
+                `<div>
+                     [시설명]: 프로포즈야채과일&lt;간이장터&gt; [주소]: 도봉구 노해로63다길 25 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ba7ef5f0993a46a98029571b0a99279c = L.marker(
+                [37.6573065, 127.064733],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_9ded205de9d20ee98e1ba671e55da105 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_ba7ef5f0993a46a98029571b0a99279c.setIcon(icon_9ded205de9d20ee98e1ba671e55da105);
+        
+    
+            marker_ba7ef5f0993a46a98029571b0a99279c.bindTooltip(
+                `<div>
+                     [시설명]: 근린생활시설(엉터리생고기) [주소]: 노원구 상계로7길 39 [연락처]: 02-938-3376 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_04aef24384cbaf182ec3cae414378e9c = L.marker(
+                [37.5364432, 126.9992492],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_74a3a2396312b474cf695548c1406839 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_04aef24384cbaf182ec3cae414378e9c.setIcon(icon_74a3a2396312b474cf695548c1406839);
+        
+    
+            marker_04aef24384cbaf182ec3cae414378e9c.bindTooltip(
+                `<div>
+                     [시설명]: 골든너겟 [주소]: 용산구 이태원로55가길  [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_412ea3de977241558526d985b8527f5f = L.marker(
+                [37.534826, 126.9000655],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_30164ad943ae1c8756f18bc900dd2cb8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_412ea3de977241558526d985b8527f5f.setIcon(icon_30164ad943ae1c8756f18bc900dd2cb8);
+        
+    
+            marker_412ea3de977241558526d985b8527f5f.bindTooltip(
+                `<div>
+                     [시설명]: 엔씨레이디스-백화점 [주소]: 영등포구 양평로 47 [연락처]: 02-2068-2001 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c3befa40f05f43f1d0f03d12b7020aad = L.marker(
+                [37.51962, 127.0281081],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_c76033c8f87751b1a90e738aa0280762 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_c3befa40f05f43f1d0f03d12b7020aad.setIcon(icon_c76033c8f87751b1a90e738aa0280762);
+        
+    
+            marker_c3befa40f05f43f1d0f03d12b7020aad.bindTooltip(
+                `<div>
+                     [시설명]: 신사면옥 [주소]: 강남구 도산대로 311 [연락처]: 02-518-7228 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a11ce4da3b2c2a2e77c86805915eaa55 = L.marker(
+                [37.51962, 127.0281081],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_0cd7b7c0b87cf444a421e82d8a2d5d68 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_a11ce4da3b2c2a2e77c86805915eaa55.setIcon(icon_0cd7b7c0b87cf444a421e82d8a2d5d68);
+        
+    
+            marker_a11ce4da3b2c2a2e77c86805915eaa55.bindTooltip(
+                `<div>
+                     [시설명]: 민속촌(용강빌딩) [주소]: 강남구 도산대로 535 [연락처]: 정보 없음 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7297c30e6fd41a5a436a4fb972f9c4fb = L.marker(
+                [37.5195396, 127.0303764],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_19efd01280815af46794bf309cec48cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_7297c30e6fd41a5a436a4fb972f9c4fb.setIcon(icon_19efd01280815af46794bf309cec48cf);
+        
+    
+            marker_7297c30e6fd41a5a436a4fb972f9c4fb.bindTooltip(
+                `<div>
+                     [시설명]: 새마을식당(덕당빌딩) [주소]: 강남구 논현로150길  [연락처]: 02-515-2251 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_769f7db87088ff3ba10c3bd30f8837cf = L.marker(
+                [37.530279, 127.006689],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_50c97c76c3b00b27bbbafbf9097a029b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_769f7db87088ff3ba10c3bd30f8837cf.setIcon(icon_50c97c76c3b00b27bbbafbf9097a029b);
+        
+    
+            marker_769f7db87088ff3ba10c3bd30f8837cf.bindTooltip(
+                `<div>
+                     [시설명]: 지오브레스빌딩 [주소]: 용산구 대사관로34길 22 [연락처]: 정보 없음 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d6bb954ad2f5d53666be3f54738bbce6 = L.marker(
+                [37.62848, 127.04439],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_d904b2feaeebd8cd4dbf865789f6ccf2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_d6bb954ad2f5d53666be3f54738bbce6.setIcon(icon_d904b2feaeebd8cd4dbf865789f6ccf2);
+        
+    
+            marker_d6bb954ad2f5d53666be3f54738bbce6.bindTooltip(
+                `<div>
+                     [시설명]: 골방집 [주소]: 강북구 한천로 926 [연락처]: 02-993-8200 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f35b7a51c884027b6f5778e58218e605 = L.marker(
+                [37.4960817, 127.0319315],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_4570b111d7335a3d043c413e14b53624 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_f35b7a51c884027b6f5778e58218e605.setIcon(icon_4570b111d7335a3d043c413e14b53624);
+        
+    
+            marker_f35b7a51c884027b6f5778e58218e605.bindTooltip(
+                `<div>
+                     [시설명]: 호야 [주소]: 강남구 강남대로78길  [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9239965faf8f7b4794d30803ba34a4ae = L.marker(
+                [37.5272125, 127.0475161],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_8dad8ae952266ca2383bdb350b311040 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_9239965faf8f7b4794d30803ba34a4ae.setIcon(icon_8dad8ae952266ca2383bdb350b311040);
+        
+    
+            marker_9239965faf8f7b4794d30803ba34a4ae.bindTooltip(
+                `<div>
+                     [시설명]: 쉐프케이엔알(송은아트 스페이스) [주소]: 강남구 압구정로75길  [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a6b4877c2402789401d5af80424a40ff = L.marker(
+                [37.6325129, 127.043492],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_d279020c6da6c30194b674e452619b45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_a6b4877c2402789401d5af80424a40ff.setIcon(icon_d279020c6da6c30194b674e452619b45);
+        
+    
+            marker_a6b4877c2402789401d5af80424a40ff.bindTooltip(
+                `<div>
+                     [시설명]: 온누림 [주소]: 노원구 덕릉로60길 293 [연락처]: 02-906-7002 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16de100d053c7ce460d45de6f9187749 = L.marker(
+                [37.482511, 126.9492377],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_7bddd46e35988d31239014dc58ca0449 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_16de100d053c7ce460d45de6f9187749.setIcon(icon_7bddd46e35988d31239014dc58ca0449);
+        
+    
+            marker_16de100d053c7ce460d45de6f9187749.bindTooltip(
+                `<div>
+                     [시설명]: 박미선 별난갈비 [주소]: 관악구 봉천로  [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6864622567d58e3f56cf0f79c130645a = L.marker(
+                [37.5283787, 126.9002438],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_fc95098448e9a4ba46c53ba752d564ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_6864622567d58e3f56cf0f79c130645a.setIcon(icon_fc95098448e9a4ba46c53ba752d564ac);
+        
+    
+            marker_6864622567d58e3f56cf0f79c130645a.bindTooltip(
+                `<div>
+                     [시설명]: 서광폴리머 [주소]: 영등포구 국회대로37길 5 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e8cdb63d1045a822c5445fcfac171fd9 = L.marker(
+                [37.5278376, 127.1362641],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_290b28c46f7e88d1ec8fcc7aceac4b7b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_e8cdb63d1045a822c5445fcfac171fd9.setIcon(icon_290b28c46f7e88d1ec8fcc7aceac4b7b);
+        
+    
+            marker_e8cdb63d1045a822c5445fcfac171fd9.bindTooltip(
+                `<div>
+                     [시설명]: 양촌리 [주소]: 강동구 양재대로 1444 [연락처]: 02-485-9292 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_062fb4440456c236502e5980e9ec8a91 = L.marker(
+                [37.6561248, 127.0625202],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_a5ab0a6071e1d5a81cb74bc15d47a5c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_062fb4440456c236502e5980e9ec8a91.setIcon(icon_a5ab0a6071e1d5a81cb74bc15d47a5c8);
+        
+    
+            marker_062fb4440456c236502e5980e9ec8a91.bindTooltip(
+                `<div>
+                     [시설명]: 참치박사 [주소]: 노원구 노해로81길 12-33 [연락처]: 02-933-9611 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8dd61e120e8c07e63b2edf3ce642e458 = L.marker(
+                [37.5600406, 126.9369239],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_993f61ec902f4ecfd3519823c6c05849 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_8dd61e120e8c07e63b2edf3ce642e458.setIcon(icon_993f61ec902f4ecfd3519823c6c05849);
+        
+    
+            marker_8dd61e120e8c07e63b2edf3ce642e458.bindTooltip(
+                `<div>
+                     [시설명]: 파스꾸찌신촌연대점 [주소]: 서대문구 연세로 22 [연락처]: 02-393-8004 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6025f6a1ce1944bd11098d9c0fba0449 = L.marker(
+                [37.6736923, 127.0552574],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_124f19deac68a7fab59ced318ffe1bfc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_6025f6a1ce1944bd11098d9c0fba0449.setIcon(icon_124f19deac68a7fab59ced318ffe1bfc);
+        
+    
+            marker_6025f6a1ce1944bd11098d9c0fba0449.bindTooltip(
+                `<div>
+                     [시설명]: 강강술래 [주소]: 노원구 동일로 1628 [연락처]: 02-935-9233 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0c88a19748837338848d626a605ff866 = L.marker(
+                [37.5278376, 127.1362641],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_bf0f2b6c96caa8f18472cb1608d27436 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_0c88a19748837338848d626a605ff866.setIcon(icon_bf0f2b6c96caa8f18472cb1608d27436);
+        
+    
+            marker_0c88a19748837338848d626a605ff866.bindTooltip(
+                `<div>
+                     [시설명]: 롯데리아 [주소]: 강동구 양재대로 1651 [연락처]: 02-427-8463 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6bed5b4a20da0d2a5a61a3336e1ec17e = L.marker(
+                [37.4973549, 127.0318573],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_11245e9938d1d847d0e4b47df6df9a85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_6bed5b4a20da0d2a5a61a3336e1ec17e.setIcon(icon_11245e9938d1d847d0e4b47df6df9a85);
+        
+    
+            marker_6bed5b4a20da0d2a5a61a3336e1ec17e.bindTooltip(
+                `<div>
+                     [시설명]: (주)에도긴 [주소]: 강남구 테헤란로8길  [연락처]: 02-568-5147 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_84b6e339b75543240e39b8d10091b4c0 = L.marker(
+                [37.5001577, 126.9077017],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_24a95de9a8f6b7bd6290ebc2699eaab5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_84b6e339b75543240e39b8d10091b4c0.setIcon(icon_24a95de9a8f6b7bd6290ebc2699eaab5);
+        
+    
+            marker_84b6e339b75543240e39b8d10091b4c0.bindTooltip(
+                `<div>
+                     [시설명]: 한우식당 마블스 [주소]: 영등포구 신풍로  [연락처]: 02-848-5292 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b97a14b270e6dfe9358f2cd5fe8c4f22 = L.marker(
+                [37.5201057, 127.0227795],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_57bd1480a67ae669f3f4941ba2d842a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_b97a14b270e6dfe9358f2cd5fe8c4f22.setIcon(icon_57bd1480a67ae669f3f4941ba2d842a2);
+        
+    
+            marker_b97a14b270e6dfe9358f2cd5fe8c4f22.bindTooltip(
+                `<div>
+                     [시설명]: 커피스미스 [주소]: 강남구 도산대로13길 13 [연락처]: 02-3445-3372 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16059a59788d9b5a770988f87606ea71 = L.marker(
+                [37.51962, 127.0281081],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_134eb6f9d206e1ae82172959a6b9452a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_16059a59788d9b5a770988f87606ea71.setIcon(icon_134eb6f9d206e1ae82172959a6b9452a);
+        
+    
+            marker_16059a59788d9b5a770988f87606ea71.bindTooltip(
+                `<div>
+                     [시설명]: Amazing B/D [주소]: 강남구 도산대로 306 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f5ab78214447aa7abd62566408e23204 = L.marker(
+                [37.5233312, 127.0488723],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_14ddc50f461c343f2ba469a14b51da09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_f5ab78214447aa7abd62566408e23204.setIcon(icon_14ddc50f461c343f2ba469a14b51da09);
+        
+    
+            marker_f5ab78214447aa7abd62566408e23204.bindTooltip(
+                `<div>
+                     [시설명]: 영천 영화 고기집(상민빌딩) [주소]: 강남구 도산대로90길 3 [연락처]: 02-3442-0381 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2eaae039cce91f8dd2a25349578ccec4 = L.marker(
+                [37.5944184, 126.9465869],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_0627e155dc0619f9713d3106c7a570f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_2eaae039cce91f8dd2a25349578ccec4.setIcon(icon_0627e155dc0619f9713d3106c7a570f9);
+        
+    
+            marker_2eaae039cce91f8dd2a25349578ccec4.bindTooltip(
+                `<div>
+                     [시설명]: 파리바게트 [주소]: 서대문구 홍은중앙로 29 [연락처]: 070-4116-4796 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b784babfc9c8e0812fe0148e3e2e3721 = L.marker(
+                [37.6445766, 127.0324381],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_9bf0db558d82cb32b268d03639bafc74 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_b784babfc9c8e0812fe0148e3e2e3721.setIcon(icon_9bf0db558d82cb32b268d03639bafc74);
+        
+    
+            marker_b784babfc9c8e0812fe0148e3e2e3721.bindTooltip(
+                `<div>
+                     [시설명]: 도봉산갈비 [주소]: 도봉구 도봉로  [연락처]: 02-955-1177 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8afc4ecb377dde10ace7f15432421653 = L.marker(
+                [37.568690450000005, 126.9780013482551],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_3f77f2a22426916552f10149a5263b64 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_8afc4ecb377dde10ace7f15432421653.setIcon(icon_3f77f2a22426916552f10149a5263b64);
+        
+    
+            marker_8afc4ecb377dde10ace7f15432421653.bindTooltip(
+                `<div>
+                     [시설명]: 한국의집 [주소]: 중구 청계천로 8 [연락처]: 02-2266-9101 [장애인 전용 주차구역]:Y [장애인 화장실]:Y [장애인용 승강기]: Y [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e6cdadac47477d604c1eafb4c82cfe38 = L.marker(
+                [37.5067233, 127.0566608],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_879b2dc17b0925ae757b3e64d61643da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_e6cdadac47477d604c1eafb4c82cfe38.setIcon(icon_879b2dc17b0925ae757b3e64d61643da);
+        
+    
+            marker_e6cdadac47477d604c1eafb4c82cfe38.bindTooltip(
+                `<div>
+                     [시설명]: wellz-가구판매 [주소]: 강남구 삼성로 729 [연락처]: 02-511-7911 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6738ae70162d4e5de4fb5968b637566c = L.marker(
+                [37.4758604, 126.9796072],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_2349041f9cfb24cb1ec1f27d225519b0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_6738ae70162d4e5de4fb5968b637566c.setIcon(icon_2349041f9cfb24cb1ec1f27d225519b0);
+        
+    
+            marker_6738ae70162d4e5de4fb5968b637566c.bindTooltip(
+                `<div>
+                     [시설명]: 삼수갑산 [주소]: 관악구 남현1길  [연락처]: 02-521-0056 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d0acdb7f1d67256a39aa7dd4c6651dda = L.marker(
+                [37.6382737, 127.0249209],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_13c2959ec1da63a48d34e3b943af42af = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_d0acdb7f1d67256a39aa7dd4c6651dda.setIcon(icon_13c2959ec1da63a48d34e3b943af42af);
+        
+    
+            marker_d0acdb7f1d67256a39aa7dd4c6651dda.bindTooltip(
+                `<div>
+                     [시설명]: 수상한포차 [주소]: 강북구 도봉로87길 46 [연락처]: 02-903-2332 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_35261bc2511c6f3ae933a944c62b0bcf = L.marker(
+                [37.4664901, 126.8960857],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_28e2b5f457252607e3c170ecf6d9c506 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_35261bc2511c6f3ae933a944c62b0bcf.setIcon(icon_28e2b5f457252607e3c170ecf6d9c506);
+        
+    
+            marker_35261bc2511c6f3ae933a944c62b0bcf.bindTooltip(
+                `<div>
+                     [시설명]: 라부미텔 [주소]: 금천구 범안로  [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_22335dfa6d37f802db9e7915e12aa49d = L.marker(
+                [37.5453311, 126.9195762],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_e9bf81605ae148c0e5dc8a00f6caa36e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_22335dfa6d37f802db9e7915e12aa49d.setIcon(icon_e9bf81605ae148c0e5dc8a00f6caa36e);
+        
+    
+            marker_22335dfa6d37f802db9e7915e12aa49d.bindTooltip(
+                `<div>
+                     [시설명]: 언더브릿지(일반음식점) [주소]: 마포구 토정로  [연락처]: 070-4146-0856 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9f958b84fee3297a7a24b052b7b19bd5 = L.marker(
+                [37.6745081, 127.0610072],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_923ca1b2f3e5e5be8925759f8cc05717 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_9f958b84fee3297a7a24b052b7b19bd5.setIcon(icon_923ca1b2f3e5e5be8925759f8cc05717);
+        
+    
+            marker_9f958b84fee3297a7a24b052b7b19bd5.bindTooltip(
+                `<div>
+                     [시설명]: 근린생활시설(봉평산골메밀촌) [주소]: 노원구 동일로242길 54 [연락처]: 02-931-3482 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_23b2261668b7893eb44ef69d5d1e11fb = L.marker(
+                [37.5671883, 126.91302175],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_c74f1a9e375bc0eff6a46645fe2ffce8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_23b2261668b7893eb44ef69d5d1e11fb.setIcon(icon_c74f1a9e375bc0eff6a46645fe2ffce8);
+        
+    
+            marker_23b2261668b7893eb44ef69d5d1e11fb.bindTooltip(
+                `<div>
+                     [시설명]: 서울인삼토계촌(일반음식점) [주소]: 마포구 모래내로 89 [연락처]: 02-304-5060 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_66cf379de2b2838197576c9bcdb4cf5d = L.marker(
+                [37.5286052, 127.0461881],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_2f297125158af03835908ec362826afa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_66cf379de2b2838197576c9bcdb4cf5d.setIcon(icon_2f297125158af03835908ec362826afa);
+        
+    
+            marker_66cf379de2b2838197576c9bcdb4cf5d.bindTooltip(
+                `<div>
+                     [시설명]: 투쉐 카페&amp;레스토랑(미산빌딩) [주소]: 강남구 압구정로71길 4 [연락처]: 02-3018-1002 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_da6ecb5cfa46abaf325e6a5960863fa2 = L.marker(
+                [37.4939181, 127.0121703],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_2ae65ba527be2bc2bdf024202bf1d530 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_da6ecb5cfa46abaf325e6a5960863fa2.setIcon(icon_2ae65ba527be2bc2bdf024202bf1d530);
+        
+    
+            marker_da6ecb5cfa46abaf325e6a5960863fa2.bindTooltip(
+                `<div>
+                     [시설명]: 서초동이남장 [주소]: 서초구 서초대로49길 4 [연락처]: 02-592-0268 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7ffd349fd617f54897c5f83b68939461 = L.marker(
+                [37.541768, 126.9513165],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_73d35986b4a1ef1b618c3eeefacd9162 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_7ffd349fd617f54897c5f83b68939461.setIcon(icon_73d35986b4a1ef1b618c3eeefacd9162);
+        
+    
+            marker_7ffd349fd617f54897c5f83b68939461.bindTooltip(
+                `<div>
+                     [시설명]: 일반음식점(나주곰탕) [주소]: 마포구 도화길 12 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b9c4ea2c1a81b7e350ed62639cf7955b = L.marker(
+                [37.65185, 127.0780688],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_5e9ea8e923cc91fa5f5c1fc4b1228931 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_b9c4ea2c1a81b7e350ed62639cf7955b.setIcon(icon_5e9ea8e923cc91fa5f5c1fc4b1228931);
+        
+    
+            marker_b9c4ea2c1a81b7e350ed62639cf7955b.bindTooltip(
+                `<div>
+                     [시설명]: 일반음식점(에덴) [주소]: 노원구 중계로18길 9 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d837f3e8807c3abc20d914304a895f42 = L.marker(
+                [37.557264, 126.9368915],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_ab132b3119741eb83d96bcdad78ad529 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_d837f3e8807c3abc20d914304a895f42.setIcon(icon_ab132b3119741eb83d96bcdad78ad529);
+        
+    
+            marker_d837f3e8807c3abc20d914304a895f42.bindTooltip(
+                `<div>
+                     [시설명]: 미스터피자 [주소]: 서대문구 연세로 10 [연락처]: 02-363-9001 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_55f474194cb560b651efc5bb2d63be09 = L.marker(
+                [37.5302265, 126.8905587],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_5dea4dfcbd8d958e3e5f79a2c752eb67 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_55f474194cb560b651efc5bb2d63be09.setIcon(icon_5dea4dfcbd8d958e3e5f79a2c752eb67);
+        
+    
+            marker_55f474194cb560b651efc5bb2d63be09.bindTooltip(
+                `<div>
+                     [시설명]: 진미파라곤 [주소]: 영등포구 국회대로 800 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b747b0bc3b296ee7b9d038d0ae51ca0 = L.marker(
+                [37.5681511, 126.9309717],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_03152b7728f6232ba6eaa227b517e2e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_3b747b0bc3b296ee7b9d038d0ae51ca0.setIcon(icon_03152b7728f6232ba6eaa227b517e2e3);
+        
+    
+            marker_3b747b0bc3b296ee7b9d038d0ae51ca0.bindTooltip(
+                `<div>
+                     [시설명]: 이화원 [주소]: 서대문구 연희맛로 13 [연락처]: 02-334-1888 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_176ec0747f1848d78c1f6856e056f77b = L.marker(
+                [37.5419143, 127.0680063],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_9b795bbe60392d2c777144309b52670a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_176ec0747f1848d78c1f6856e056f77b.setIcon(icon_9b795bbe60392d2c777144309b52670a);
+        
+    
+            marker_176ec0747f1848d78c1f6856e056f77b.bindTooltip(
+                `<div>
+                     [시설명]: 쌍쌍포차 [주소]: 광진구 동일로22길 49 [연락처]: 02-466-9545 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_60b60a5a3c5ca8f30b7ea892cd16a7b1 = L.marker(
+                [37.5554981, 126.853861],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_f93ffedfe89f9e644db742f1da638d7f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_60b60a5a3c5ca8f30b7ea892cd16a7b1.setIcon(icon_f93ffedfe89f9e644db742f1da638d7f);
+        
+    
+            marker_60b60a5a3c5ca8f30b7ea892cd16a7b1.bindTooltip(
+                `<div>
+                     [시설명]: 빕스 등촌점 [주소]: 강서구 공항대로  [연락처]: 02-3661-1997 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6a6ff34bfff9ac53b8f58e54a01ec98e = L.marker(
+                [37.487733, 126.9294424],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_0f569e76752c122d38a9d89f2d05f2f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_6a6ff34bfff9ac53b8f58e54a01ec98e.setIcon(icon_0f569e76752c122d38a9d89f2d05f2f3);
+        
+    
+            marker_6a6ff34bfff9ac53b8f58e54a01ec98e.bindTooltip(
+                `<div>
+                     [시설명]: 바달비 [주소]: 관악구 봉천로12길  [연락처]: 02-889-2600 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_05a6e8a65b5e5588381278e89224e2a4 = L.marker(
+                [37.5095073, 126.9991148],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_8d4a0df8272e6f6c15d9e4888cedb8f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_05a6e8a65b5e5588381278e89224e2a4.setIcon(icon_8d4a0df8272e6f6c15d9e4888cedb8f3);
+        
+    
+            marker_05a6e8a65b5e5588381278e89224e2a4.bindTooltip(
+                `<div>
+                     [시설명]: 오발탄 [주소]: 서초구 반포대로 154 [연락처]: 02-591-6657 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_48d12e2e1ed346910ea6b59f7ea5d0f7 = L.marker(
+                [37.5641369, 126.930416],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_70bc7ce5d01e9208c6ef04938594650b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_48d12e2e1ed346910ea6b59f7ea5d0f7.setIcon(icon_70bc7ce5d01e9208c6ef04938594650b);
+        
+    
+            marker_48d12e2e1ed346910ea6b59f7ea5d0f7.bindTooltip(
+                `<div>
+                     [시설명]: 예소원 [주소]: 서대문구 성산로 535 [연락처]: 02-313-7676 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a1c960da9afece9ab28f52f4051a51e3 = L.marker(
+                [37.5232886, 127.0341208],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_698ba570a977c350503574fcb0d5286d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_a1c960da9afece9ab28f52f4051a51e3.setIcon(icon_698ba570a977c350503574fcb0d5286d);
+        
+    
+            marker_a1c960da9afece9ab28f52f4051a51e3.bindTooltip(
+                `<div>
+                     [시설명]: 보보리스-미용실 [주소]: 강남구 언주로154길  [연락처]: 02-549-0988 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ecfa0518c44cf66e608e8688bba020da = L.marker(
+                [37.497153749999995, 126.8647007809781],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_aa47ff542807fbaa011c1d94c350589d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_ecfa0518c44cf66e608e8688bba020da.setIcon(icon_aa47ff542807fbaa011c1d94c350589d);
+        
+    
+            marker_ecfa0518c44cf66e608e8688bba020da.bindTooltip(
+                `<div>
+                     [시설명]: 실크로드 [주소]: 구로구 경인로 398 [연락처]: 02-2066-6100 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4faf2a18662db0abd5887f891d79595e = L.marker(
+                [37.6573, 127.06643],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_86bd1832d7335d126b9597c8126f6bf3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_4faf2a18662db0abd5887f891d79595e.setIcon(icon_86bd1832d7335d126b9597c8126f6bf3);
+        
+    
+            marker_4faf2a18662db0abd5887f891d79595e.bindTooltip(
+                `<div>
+                     [시설명]: 일파르코 [주소]: 노원구 노원로 240 [연락처]: 02-949-1855 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_28c6e092d48b45fe8b9c8005c1b8cb7b = L.marker(
+                [37.543682, 127.0707013],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_7c7a2639e396d5a4558ceccde234e255 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_28c6e092d48b45fe8b9c8005c1b8cb7b.setIcon(icon_7c7a2639e396d5a4558ceccde234e255);
+        
+    
+            marker_28c6e092d48b45fe8b9c8005c1b8cb7b.bindTooltip(
+                `<div>
+                     [시설명]: 수상한포차 [주소]: 광진구 아차산로33길 33 [연락처]: 02-499-2588 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3f89f503033cb63627ff07392696cd67 = L.marker(
+                [37.6418244, 127.0704691],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_c024801dd36f475f448fd2511415dba2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_3f89f503033cb63627ff07392696cd67.setIcon(icon_c024801dd36f475f448fd2511415dba2);
+        
+    
+            marker_3f89f503033cb63627ff07392696cd67.bindTooltip(
+                `<div>
+                     [시설명]: 남원추어탕 [주소]: 노원구 한글비석로1길 69 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c5b598d83b10529c656d95c10a064588 = L.marker(
+                [37.5600406, 126.9369239],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_309942797c16f8e4d1a42e7207d5e222 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_c5b598d83b10529c656d95c10a064588.setIcon(icon_309942797c16f8e4d1a42e7207d5e222);
+        
+    
+            marker_c5b598d83b10529c656d95c10a064588.bindTooltip(
+                `<div>
+                     [시설명]: 벽제갈비 [주소]: 서대문구 연세로 14 [연락처]: 02-392-8308 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0b1a71262411dd90a0bcca3eea72111b = L.marker(
+                [37.4971742, 127.0241115],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_5fac4754630707e0f51b1a30dcee7525 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_0b1a71262411dd90a0bcca3eea72111b.setIcon(icon_5fac4754630707e0f51b1a30dcee7525);
+        
+    
+            marker_0b1a71262411dd90a0bcca3eea72111b.bindTooltip(
+                `<div>
+                     [시설명]: 초동집 [주소]: 서초구 서운로  [연락처]: 02-585-2511 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_408d2b5439edf01cc4797b0a4f4e2936 = L.marker(
+                [37.5119737, 127.0210057],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_509152319d7f8a4ddc883daecbf1b545 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_408d2b5439edf01cc4797b0a4f4e2936.setIcon(icon_509152319d7f8a4ddc883daecbf1b545);
+        
+    
+            marker_408d2b5439edf01cc4797b0a4f4e2936.bindTooltip(
+                `<div>
+                     [시설명]: 미스터피자 양재점(크리스탈빌딩) [주소]: 강남구 강남대로  [연락처]: 02-3463-1100 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1eb5b0f26d0f08f493e6d7a6cc170f70 = L.marker(
+                [37.487603, 126.9852537],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_b84dfe6a069b490ce7196261fe35cf8b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_1eb5b0f26d0f08f493e6d7a6cc170f70.setIcon(icon_b84dfe6a069b490ce7196261fe35cf8b);
+        
+    
+            marker_1eb5b0f26d0f08f493e6d7a6cc170f70.bindTooltip(
+                `<div>
+                     [시설명]: 뢰벤호프 [주소]: 서초구 방배천로  [연락처]: 02-585-6654 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7b0db37aa18107e975b5b4d487021ea7 = L.marker(
+                [37.5566201, 126.9343154],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_7749785b02822b21a13703698e1d1369 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_7b0db37aa18107e975b5b4d487021ea7.setIcon(icon_7749785b02822b21a13703698e1d1369);
+        
+    
+            marker_7b0db37aa18107e975b5b4d487021ea7.bindTooltip(
+                `<div>
+                     [시설명]: 삼호복집 [주소]: 서대문구 연세로5다길 10 [연락처]: 02-337-9019 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_22de665bb6aa0ff0da6b77bd3a1760f3 = L.marker(
+                [37.5585763, 126.937609],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_0cbfd4ee5003fa88f3b46d4c120d0998 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_22de665bb6aa0ff0da6b77bd3a1760f3.setIcon(icon_0cbfd4ee5003fa88f3b46d4c120d0998);
+        
+    
+            marker_22de665bb6aa0ff0da6b77bd3a1760f3.bindTooltip(
+                `<div>
+                     [시설명]: 형제갈비 [주소]: 서대문구 명물1길  [연락처]: 02-365-0001 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2fb66c6c91d0e54673d118cde7e93fc2 = L.marker(
+                [37.6094, 126.9162],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_4cadb84d626d052011d7ec2ef94d8fbe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_2fb66c6c91d0e54673d118cde7e93fc2.setIcon(icon_4cadb84d626d052011d7ec2ef94d8fbe);
+        
+    
+            marker_2fb66c6c91d0e54673d118cde7e93fc2.bindTooltip(
+                `<div>
+                     [시설명]: 연신내부대찌개 [주소]: 은평구 연서로  [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_61a33cbd2a807ec888afc968fe7d7d5f = L.marker(
+                [37.6558697, 126.9493411],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_bff4acf70a110abd6f0a0fd85fa65ad5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_61a33cbd2a807ec888afc968fe7d7d5f.setIcon(icon_bff4acf70a110abd6f0a0fd85fa65ad5);
+        
+    
+            marker_61a33cbd2a807ec888afc968fe7d7d5f.bindTooltip(
+                `<div>
+                     [시설명]: 옛골토성 [주소]: 은평구 대서문길  [연락처]: 02-385-3064 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d1576d673d3cd89248f9cd3b2bd11987 = L.marker(
+                [37.5262136, 127.0522174],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_f6484bb25a46fcf881562a462e6e9564 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_d1576d673d3cd89248f9cd3b2bd11987.setIcon(icon_f6484bb25a46fcf881562a462e6e9564);
+        
+    
+            marker_d1576d673d3cd89248f9cd3b2bd11987.bindTooltip(
+                `<div>
+                     [시설명]: 코리아하우스(아름다운빌딩) [주소]: 강남구 압구정로79길 56 [연락처]: 02-543-8888 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bdaba2974574219e8b50c64c99885f64 = L.marker(
+                [37.5248662, 127.1322197],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_c1b0341754b519b838ac5756ea388771 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_bdaba2974574219e8b50c64c99885f64.setIcon(icon_c1b0341754b519b838ac5756ea388771);
+        
+    
+            marker_bdaba2974574219e8b50c64c99885f64.bindTooltip(
+                `<div>
+                     [시설명]: 신라비빔밥샤브칼국수 [주소]: 강동구 양재대로85길 16 [연락처]: 02-483-6879 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ac9a0760d4eb6a9360d0c3b2865cc401 = L.marker(
+                [37.4903263, 126.9928572],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_8eb78b3cf289c9c0a97df71ef2d07e9f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_ac9a0760d4eb6a9360d0c3b2865cc401.setIcon(icon_8eb78b3cf289c9c0a97df71ef2d07e9f);
+        
+    
+            marker_ac9a0760d4eb6a9360d0c3b2865cc401.bindTooltip(
+                `<div>
+                     [시설명]: 황실떡 [주소]: 서초구 서초대로25길 37 [연락처]: 02-533-5580 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6370acd52973fa6032b17ec600f662ac = L.marker(
+                [37.5071061, 127.0260796],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_a784bff008fa64cb9f7710d2dddbda0c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_6370acd52973fa6032b17ec600f662ac.setIcon(icon_a784bff008fa64cb9f7710d2dddbda0c);
+        
+    
+            marker_6370acd52973fa6032b17ec600f662ac.bindTooltip(
+                `<div>
+                     [시설명]: 한우정육식당(부경빌딩) [주소]: 강남구 강남대로118길 12 [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ff47c0be662882fce053f2f9cd295d9e = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_ec07862f90563576afc87f80917b4f26 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_ff47c0be662882fce053f2f9cd295d9e.setIcon(icon_ec07862f90563576afc87f80917b4f26);
+        
+    
+            marker_ff47c0be662882fce053f2f9cd295d9e.bindTooltip(
+                `<div>
+                     [시설명]: 엔젤리너스카페 [주소]: 중구 명동7길 8 [연락처]: 02-753-1769 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4bd6bb4b47b8fdacf91e0c291b2937d6 = L.marker(
+                [37.6128672, 126.9139794],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_1bd833abc36f741748bc9cf302e7366f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_4bd6bb4b47b8fdacf91e0c291b2937d6.setIcon(icon_1bd833abc36f741748bc9cf302e7366f);
+        
+    
+            marker_4bd6bb4b47b8fdacf91e0c291b2937d6.bindTooltip(
+                `<div>
+                     [시설명]: 씨제이푸드 [주소]: 은평구 서오릉로  [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fd9ad585a2ef4a080a49abd684fb76a6 = L.marker(
+                [37.5201057, 127.0227795],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_f904bc04f8fd7e74c4c0ff1da78eb7a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_fd9ad585a2ef4a080a49abd684fb76a6.setIcon(icon_f904bc04f8fd7e74c4c0ff1da78eb7a4);
+        
+    
+            marker_fd9ad585a2ef4a080a49abd684fb76a6.bindTooltip(
+                `<div>
+                     [시설명]: 봉추찜닭(신사빌딩) [주소]: 강남구 도산대로13길 14-4 [연락처]: 02-516-5687 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_77422028c9c248ced8610c30794be595 = L.marker(
+                [37.523126, 127.0391626],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_320a05dc72f695528761deb98176dc54 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_77422028c9c248ced8610c30794be595.setIcon(icon_320a05dc72f695528761deb98176dc54);
+        
+    
+            marker_77422028c9c248ced8610c30794be595.bindTooltip(
+                `<div>
+                     [시설명]: 세븐몽키스(금원빌딩) [주소]: 강남구 선릉로  [연락처]: 정보 없음 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: N
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_10f1ca1c21f4d06217c23b4ec3b8ba98 = L.marker(
+                [37.5583607, 126.9665778],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_b3cbfaef8c8a69efaae3bb0fa31fe068 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_10f1ca1c21f4d06217c23b4ec3b8ba98.setIcon(icon_b3cbfaef8c8a69efaae3bb0fa31fe068);
+        
+    
+            marker_10f1ca1c21f4d06217c23b4ec3b8ba98.bindTooltip(
+                `<div>
+                     [시설명]: 프리미어플레이스 [주소]: 중구 중림로 40 [연락처]: 정보 없음 [장애인 전용 주차구역]:N [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_35b3aa439e6e0856ebc76fc5f13e3b98 = L.marker(
+                [37.5255478, 127.1176179],
+                {}
+            ).addTo(marker_cluster_089a9a94e8c675a22c8e4815ace08870);
+        
+    
+            var icon_029770534868abee034894408e724fcb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "g", "prefix": "glyphicon"}
+            );
+            marker_35b3aa439e6e0856ebc76fc5f13e3b98.setIcon(icon_029770534868abee034894408e724fcb);
+        
+    
+            marker_35b3aa439e6e0856ebc76fc5f13e3b98.bindTooltip(
+                `<div>
+                     [시설명]: 경복궁 [주소]: 송파구 올림픽로  [연락처]: 02-418-7767 [장애인 전용 주차구역]:Y [장애인 화장실]:N [장애인용 승강기]: N [주출입구 높이차이 제거]: Y
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
